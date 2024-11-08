@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container for the input and button */
+        div {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Input field */
+        #studs {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        #studs:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        /* Show result area */
+        #show {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Paragraph styling */
+        #show p {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" name="" id="studs">
+    <button onclick="allName()">Submit</button>
+    <div id="show">show result</div>
+</div>
+    <script>
+        var llName = []
+        function allName() { 
+            if (studs.value === ''){
+                alert("I am empty oooo, fill something there")           
+            } else{
+                llName.push(studs.value)
+                console.log(llName);
+                document.getElementById('studs').value = ''
+                show.innerHTML = ""
+                for (i = 0; i < llName.length; i++){
+                    show.innerHTML += `<P>${i+1}. ${llName[i]}</P>`
+                }
+            }
+            // var displayDiv = document.getElementById('show')
+            // displayDiv.textContent = llName.join(', ')
+        }
+
+        // var allTransactions = [34000, 1000, 3000, 200, 100]
+        // console.log(allTransactions);
+        // var allMenu = ['femi', 1000, 3000, "Mary", 100]
+        // console.log(allMenu);
+        // var allNames = ['john', 'Dave', 'joseph']
+        // console.log(allNames);
+        // var allStudents = []
+        // allStudents.push('Kola')
+        // allStudents.push('Sola')
+        // allStudents.push('Bola')
+        // allStudents.push('Tola')
+        // allStudents.unshift('Fola')
+        // allStudents.unshift('Lola')
+        // allStudents.pop()
+        // allStudents.shift()
+        </script>
+</body>
+</html>
